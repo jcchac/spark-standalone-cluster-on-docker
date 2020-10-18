@@ -11,7 +11,7 @@ RUN mkdir -p ${shared_workspace} && \
     ln -s /usr/bin/python3 /usr/bin/python && \
     rm -rf /var/lib/apt/lists/*
 
-ENV SHARED_WORKSPACE=&{shared_workspace}
+ENV SHARED_WORKSPACE=${shared_workspace}
 
 # -- Runtime
 
