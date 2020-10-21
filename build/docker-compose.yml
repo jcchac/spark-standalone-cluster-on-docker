@@ -22,7 +22,7 @@ services:
         volumes:
             - shared_workspace:/opt/workspace
     spark-worker-1:
-        iamge: spark-worker
+        image: spark-worker
         container_name: spark-worker-1
         environment: 
             - SPARK_WORKER_CORES=1
@@ -34,7 +34,7 @@ services:
         depends_on: 
             - spark-master
     spark-worker-2:
-        iamge: spark-worker
+        image: spark-worker
         container_name: spark-worker-2
         environment: 
             - SPARK_WORKER_CORES=1
