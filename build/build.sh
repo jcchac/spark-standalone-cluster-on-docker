@@ -96,19 +96,19 @@ function buildImages() {
         docker build \
         --build-arg spark_version="${SPARK_VERSION}" \
         --build-arg hadoop_version="${HADOOP_VERSION}" \
-        -f docker/spark-base/Dockerfile \
+        -f docker/spark_base/Dockerfile \
         -t spark-base .
 
         docker build \
         --build-arg spark_version="${SPARK_VERSION}" \
         --build-arg hadoop_version="${HADOOP_VERSION}" \
-        -f docker/spark-master/Dockerfile \
+        -f docker/spark_master/Dockerfile \
         -t spark-master .
 
         docker build \
         --build-arg spark_version="${SPARK_VERSION}" \
         --build-arg hadoop_version="${HADOOP_VERSION}" \
-        -f docker/spark-worker/Dockerfile \
+        -f docker/spark_worker/Dockerfile \
         -t spark-worker .
     fi
 
