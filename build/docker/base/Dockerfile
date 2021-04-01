@@ -1,4 +1,4 @@
-ARG debian_buster_image_tag=8-jre-slim
+ARG debian_buster_image_tag=11.0.10-jre-slim
 FROM openjdk:${debian_buster_image_tag}
 
 # -- Layer: OS + Python + Scala + R

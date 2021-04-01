@@ -24,9 +24,9 @@ then
   SCALA_KERNEL_VERSION="0.6.0"
 elif [[ "${SPARK_VERSION_MAJOR}"  == "3" ]]
 then
-  HADOOP_VERSION="3.2"
-  SCALA_VERSION="2.12.10"
-  SCALA_KERNEL_VERSION="0.10.9"
+  HADOOP_VERSION="$(grep -m 1 hadoop build.yml | grep -o -P '(?<=").*(?=")')"
+  SCALA_VERSION="$(grep -m 1 scala build.yml | grep -o -P '(?<=").*(?=")')"
+  SCALA_KERNEL_VERSION="$(grep -m 1 scala_kernel build.yml | grep -o -P '(?<=").*(?=")')"
 else
   exit 1
 fi
